@@ -2,15 +2,19 @@
 let myObject = {
     'name':'flo',
     'age': 45,
-    'logJob': function(number){
-        console.log('Dev-Mentor' + number  )          
-    },
+    'Job': 'Dev-Mentor',
     'good_guy':true,
 };
 
 
-myObject.logJob(555)
+let objKeys = Object.keys(myObject)
+let ourArray = []
 
 
+for (let i = 0; i < objKeys.length; i++) {
+    const element = objKeys[i];
+    ourArray.push(myObject[objKeys[i]])
+    
+}
 
-//console.table(myObject);
+console.table(ourArray);
